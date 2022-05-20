@@ -19,10 +19,17 @@ The build script for this project uses [Cake](http://cakebuild.net). Make sure y
 
 To install Cake:
 
-dotnet tool install 	-g Cake.Tool	
+```
+dotnet tool install -g Cake.Tool	
+```
 
 In the terminal navigate to the root folder where build.cake script exists.
-Run command: dotnet cake 
+Run command: 
+
+```
+dotnet cake
+```
+
 It will download dependencies from Maven (to /externals directory), compile the code and package the nugets.
 
 Output will be 3 nugets (in /output directory):
