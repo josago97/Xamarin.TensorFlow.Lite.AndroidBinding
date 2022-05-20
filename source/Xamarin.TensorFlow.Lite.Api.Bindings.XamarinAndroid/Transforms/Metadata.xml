@@ -1,0 +1,29 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+	<!-- Change the override of a method -->
+	<!--<attr path="/api/package[@name='Xamarin.TensorFlow.Lite.Annotations']/class[@name='IUsedByReflectionInvoker']" name="visibility">public</attr>-->
+	
+	<attr
+	path="/api/package[@name='org.tensorflow.lite']"
+	name="managedName"
+        >
+		Xamarin.TensorFlow.Lite
+	</attr>
+	<attr
+	path="/api/package[@name='org.tensorflow.lite.annotations']"
+	name="managedName"
+        >
+		Xamarin.TensorFlow.Lite.Annotations
+	</attr>
+
+	<!-- Change the override of a method -->
+	<!--<remove-node path="/api/package[@name='org.tensorflow.lite.annotations']/class[@name='IUsedByReflectionInvoker']/method[@name='ToString']" />-->
+	<!--<attr path="/api/package[@name='org.tensorflow.lite.annotations']/class[@name='IUsedByReflectionInvoker']/method[@name='ToString']" name="override">true</attr>-->
+</metadata>
