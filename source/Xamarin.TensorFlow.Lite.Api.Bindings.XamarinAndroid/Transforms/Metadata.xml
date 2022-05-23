@@ -22,6 +22,12 @@
         >
 		Xamarin.TensorFlow.Lite.Annotations
 	</attr>
+	<attr
+	path="/api/package[@name='org.tensorflow.lite.nnapi']"
+	name="managedName"
+        >
+		Xamarin.TensorFlow.Lite.Nnapi
+	</attr>
 
 	<!-- Change the override of a method -->
 	<!--<remove-node path="/api/package[@name='org.tensorflow.lite.annotations']/class[@name='IUsedByReflectionInvoker']/method[@name='ToString']" />-->

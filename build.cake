@@ -1,13 +1,13 @@
 
 var TARGET = Argument("t", Argument("target", "ci"));
 
-var TENSOR_FLOW_LITE_NUGET_VERSION = "2.8.12";
-var TENSOR_FLOW_LITE_AAR_VERSION = "2.8.0";
+var TENSOR_FLOW_LITE_NUGET_VERSION = "2.9.8";
+var TENSOR_FLOW_LITE_AAR_VERSION = "2.9.0";
 
-var TENSOR_FLOW_LITE_GPU_NUGET_VERSION = "2.8.12";
-var TENSOR_FLOW_LITE_GPU_AAR_VERSION = "2.8.0";
+var TENSOR_FLOW_LITE_GPU_NUGET_VERSION = "2.9.8";
+var TENSOR_FLOW_LITE_GPU_AAR_VERSION = "2.9.0";
 
-var TENSOR_FLOW_LITE_API_NUGET_VERSION = "2.8.12";
+var TENSOR_FLOW_LITE_API_NUGET_VERSION = "2.9.8";
 
 var TENSOR_FLOW_LITE_API_URL_AAR_VERSION = $"https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-api/{TENSOR_FLOW_LITE_AAR_VERSION}/tensorflow-lite-api-{TENSOR_FLOW_LITE_AAR_VERSION}.aar";
 var TENSOR_FLOW_LITE_API_URL_POM_VERSION = $"https://repo1.maven.org/maven2/org/tensorflow/tensorflow-lite-api/{TENSOR_FLOW_LITE_AAR_VERSION}/tensorflow-lite-api-{TENSOR_FLOW_LITE_AAR_VERSION}.pom";
@@ -69,7 +69,7 @@ Task("libs")
 	MSBuild("./source/Xamarin.TensorFlow.Lite.sln", c => {
 		c.Configuration = "Release";
 		c.Restore = true;
-		//c.ToolVersion = MSBuildToolVersion.VS2022;
+		//c.ToolVersion = MSBuildToolVersion.VS2019;
 		c.Properties.Add("PackageOutputPath", new [] { MakeAbsolute(new FilePath("./output")).FullPath });
 		c.Properties.Add("DesignTimeBuild", new [] { "false" });
 	});
